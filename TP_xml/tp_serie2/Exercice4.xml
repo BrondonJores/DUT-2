@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE SOCIETE[
+    <!ELEMENT SOCIETE (LRI, INRIA)>
+    <!ELEMENT LRI ( directeur, equipes, projets)>
+    <!ELEMENT directeur (#PCDATA)>
+    <!ELEMENT equipes (equipe+)>
+    <!ELEMENT equipe (intitule, (directeur | directrice), references)>
+    <!ELEMENT references (reference+)>
+    <!ELEMENT reference EMPTY>
+    <!ATTLIST reference id_projet IDREF #REQUIRED>
+    <!ATTLIST equipe id ID #REQUIRED>
+    <!ELEMENT intitule (#PCDATA)>
+    <!ELEMENT directrice (#PCDATA)>
+    <!ELEMENT projets (projet+)>
+    <!ELEMENT projet (directeur | directrice)>
+    <!ATTLIST projet id_projet ID #REQUIRED nom CDATA #IMPLIED partenaire CDATA #IMPLIED>
+
+]>
+
+<LRI>
+    <directeur>Michel Beaudouin-Lafon</directeur>
+    <equipes>
+        <equipe id="equ1">
+            <intitule>Programmation</intitule>
+            <directrice>Marie-Claude Gaudel</directrice>
+            <references>
+                <reference id_projet="pr3" />
+            </references>
+        </equipe>
+        <equipe id="equ2">
+            <intitule>Démonstration</intitule>
+            <directrice>Christine Paulin</directrice>
+            <references>
+                <reference id_projet="pr4" />
+                <reference id_projet="pr5" />
+
+            </references>
+        </equipe>
+        <equipe id="equ3">
+            <intitule>Intelligence Artificielle et Systèmes d'Inférence</intitule>
+            <directrice>Chantal Reynaud</directrice>
+            <references>
+                <reference id_projet="pr1" />
+            </references>
+        </equipe>
+        <equipe id="equ4">
+            <intitule>Inférence et Apprentissage</intitule>
+            <directrice>Michèle Sebag</directrice>
+            <references>
+                <reference id_projet="pr2" />
+            </references>
+        </equipe>
+        <equipe id="equ5">
+            <intitule>Base de données</intitule>
+            <directeur>Nicolas Spyratos</directeur>
+            <references>
+                <reference id_projet="pr1" />
+            </references>
+        </equipe>
+    </equipes>
+
+    <projets>
+        <projet id_projet="pr1" nom="GEMO" partenaire="INRIA">
+            <directeur>Serge Abiteboul</directeur>
+        </projet>
+        <projet id_projet="pr2" nom="TAO" partenaire="INRIA">
+            <directeur>Marc Schoenauer</directeur>
+        </projet>
+        <projet id_projet="pr3" nom="Institue" partenaire="INRIA">
+            <directrice>Wendy Mackay</directrice>
+        </projet>
+        <projet id_projet="pr4" nom="Proval" partenaire="INRIA">
+            <directeur>Gilles Dowek</directeur>
+        </projet>
+        <projet id_projet="pr5" nom="Logiciel" partenaire="INRIA">
+            <directeur>Gilles Dowek</directeur>
+        </projet>
+    </projets>
+</LRI>

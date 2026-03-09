@@ -1,0 +1,100 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLESPACE tbs_professeur \r
+
+      DATAFILE 'Professeurfile.dbf' SIZE 50M\r
+
+      AUTOEXTEND ON NEXT 10M MAXSIZE 500M;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "CREATE TABLESPACE tbs_etudiant \r
+
+      DATAFILE 'Etudiantnotes.dbf' SIZE 50M\r
+
+      AUTOEXTEND ON NEXT 10M MAXSIZE 500M;"
+    languageId: oracle-sql
+  - kind: 2
+    value: ALTER TABLESPACE tbs_professeur ADD DATAFILE 'Professeurstatuts.dbf' SIZE
+      50M;
+    languageId: oracle-sql
+  - kind: 2
+    value: select * from tbs_etudiant;
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * from V$TABLESPACE
+    languageId: oracle-sql
+  - kind: 2
+    value: "CREATE TABLE professeur(\r
+
+      \    CIN VARCHAR2(100) PRIMARY KEY,\r
+
+      \    NOM VARCHAR2(50),\r
+
+      \    PRENOM VARCHAR2(50),\r
+
+      \    SPECIALITE VARCHAR2(50),\r
+
+      \    GRADE VARCHAR2(50),\r
+
+      \    ANNEE_DE_RECRUTEMENT DATE,\r
+
+      \    SALAIRE NUMBER(9,3)\r
+
+      )TABLESPACE Tbs_professeur; "
+    languageId: oracle-sql
+  - kind: 2
+    value: select * from PROFESSEUR;
+    languageId: oracle-sql
+  - kind: 2
+    value: "CREATE TABLE ETUDIANT(\r
+
+      \    ID NUMBER(9) PRIMARY KEY,\r
+
+      \    NOM VARCHAR2(50),\r
+
+      \    PRENOM VARCHAR2(50),\r
+
+      \    ADRESSE VARCHAR2(50),\r
+
+      \    Option_choisie VARCHAR2(20),\r
+
+      \    MOYENNE NUMBER(2,2)\r
+
+      )TABLESPACE Tbs_etudiant;"
+    languageId: oracle-sql
+  - kind: 2
+    value: select * from ETUDIANT;
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO ETUDIANT VALUES (12568, 'Mohamed', 'Yassine', 'Rue 2 Rabat',
+      'SMIA', 15);\r
+
+      INSERT INTO ETUDIANT VALUES (6598, 'Ahmed', 'Kamal', 'Avenue 10 N 15
+      Casablanca', 'SMI', 10);\r
+
+      INSERT INTO ETUDIANT VALUES (98955, 'Salim', 'Sara', 'Avenue 18 N 2
+      Tanger', 'SMIA', 16);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "ALTER TABLESPACE tbs_etudiant  OFFLINE;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: INSERT INTO ETUDIANT VALUES (985614, 'Adil', 'Rachid', 'Rue 22 Rabat',
+      'SMP', 9);
+    languageId: oracle-sql
+  - kind: 2
+    value: ALTER TABLESPACE tbs_etudiant  ONLINE;
+    languageId: oracle-sql
+  - kind: 2
+    value: INSERT INTO ETUDIANT VALUES (985614, 'Adil', 'Rachid', 'Rue 22 Rabat',
+      'SMP', 9);
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT tablespace_name, status from DBA_TABLESPACES
+    languageId: oracle-sql
+  - kind: 2
+    value: COMMIT;
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql

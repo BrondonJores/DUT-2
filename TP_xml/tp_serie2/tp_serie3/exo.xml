@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE galerie[
+    <!ELEMENT galerie (sculptures, sculpteurs, musees)>
+    <!ELEMENT sculptures (sculpture+)>
+    <!ELEMENT sculpteurs (sculpteur)>
+    <!ELEMENT musees (musee+)>
+    <!ELEMENT musee (nom)>
+    <!ATTLIST musee id ID #REQUIRED>
+    <!ELEMENT sculpture (titre, sculpteur_id, musee_id, materiau, annee_creation, hauteur, description) >
+    <!ATTLIST sculpture id CDATA #REQUIRED> 
+    <!ELEMENT titre (#PCDATA)>
+    <!ELEMENT sculpteur_id EMPTY>
+    <!ATTLIST sculpteur_id id_ref IDREF #IMPLIED>
+    <!ELEMENT musee_id EMPTY>
+    <!ATTLIST musee_id id_ref IDREF #IMPLIED>
+    <!ELEMENT sculpteur (nom, nationalite, date_vie)>
+    <!ATTLIST sculpteur id ID #REQUIRED>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT nationalite (#PCDATA)>
+    <!ELEMENT date_vie (#PCDATA)>
+    <!ELEMENT materiau EMPTY>
+    <!ATTLIST materiau type (Bois | Bronze | Pierre | Marbre) #REQUIRED >
+    <!ELEMENT annee_creation (#PCDATA)>
+    <!ELEMENT hauteur (#PCDATA)>
+    <!ATTLIST hauteur type CDATA #IMPLIED>
+    <!ELEMENT description (#PCDATA)>
+]>
+
+<galerie>
+    <sculptures>
+        <sculpture id="scul 1">
+            <titre> Mona lisa</titre>
+            <sculpteur_id id_ref="sculteur1" />
+            <musee_id id_ref="musee1" />
+            <materiau type="Bois" />
+            <annee_creation> 1921 </annee_creation>
+            <hauteur type="cm"> 100 </hauteur>          
+            <description>Tableau de leonard de vinci</description>
+        </sculpture>
+    </sculptures>
+    <sculpteurs>
+        <sculpteur id="sculteur1">
+            <nom>Leonard de vinci</nom>
+            <nationalite>Italien</nationalite>
+            <date_vie>1900</date_vie>
+        </sculpteur>
+    </sculpteurs>
+    <musees>
+        <musee id="musee1">
+            <nom>Musee de valence</nom>
+        </musee>
+    </musees>
+</galerie>

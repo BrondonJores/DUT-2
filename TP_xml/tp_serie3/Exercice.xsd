@@ -1,0 +1,40 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="rapport"> 
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="mandat" minOccurs="0" maxOccurs="unbounded"> 
+                    <xsd:complexType>
+                        <xsd:all>
+                            <xsd:element name="expediteur" minOccurs="1" maxOccurs="1">
+                                <xsd:complexType>
+                                    <xsd:attribute name="cin" type="xsd:string" use="required"/>
+                                    <xsd:attribute name="nom" type="xsd:string" use="required"/>
+                                    <xsd:attribute name="prenom" type="xsd:string" use="required"/>
+                                    <xsd:attribute name="ville" type="xsd:string" use="optional"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="destinataire" minOccurs="1" maxOccurs="1">
+                                <xsd:complexType>
+                                    <xsd:attribute name="cin" type="xsd:string" use="required"/>
+                                    <xsd:attribute name="nom" type="xsd:string" use="required"/>
+                                    <xsd:attribute name="prenom" type="xsd:string" use="required"/>
+                                    <xsd:attribute name="ville" type="xsd:string" use="optional"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:all>
+                        <xsd:attribute name="numero" type="xsd:NMTOKEN" use="required"/>
+                        <xsd:attribute name="date" type="xsd:date" use="required"/>
+                        <xsd:attribute name="montant" type="xsd:string" use="required"/>
+                        <xsd:attribute name="etat" default="Non_Reçu">
+                            <xsd:simpleType>
+                                <xsd:list itemType="xsd:string" />
+                            </xsd:simpleType>
+                        </xsd:attribute>
+                    </xsd:complexType>
+                </xsd:element> 
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

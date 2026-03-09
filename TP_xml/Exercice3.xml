@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE championnat[
+    <!ELEMENT championnat (annee, ligue, journee+)>
+        <!ELEMENT annee (#PCDATA)>
+        <!ELEMENT ligue (#PCDATA)>
+        <!ELEMENT journee (date, rencontre+)>
+            <!ATTLIST journee numero CDATA #REQUIRED>
+            <!ELEMENT date (jour, mois, annee)>
+            <!ELEMENT jour (#PCDATA)>
+            <!ELEMENT mois (#PCDATA)>
+            <!ELEMENT rencontre (equipe, equipe, resultat)>
+                <!ELEMENT equipe (#PCDATA)>
+                <!ELEMENT resultat (#PCDATA)>
+]>
+<championnat>
+    <annee>2025</annee>
+    <ligue>Coupe d'afrique des nations</ligue>
+    <journee numero="1">
+        <date>
+            <jour>25</jour>
+            <mois>Decembre</mois>
+            <annee>2025</annee>
+        </date>
+        <rencontre>
+            <equipe>Lions indomptables du cameroun</equipe>
+            <equipe>Les panthères du gabon</equipe>
+            <resultat>1-0</resultat>
+        </rencontre>
+
+        <rencontre>
+            <equipe>Les éléphants de la côte d'ivoire</equipe>
+            <equipe>Les antiloppes du mozambique</equipe>
+            <resultat>1-0</resultat>
+        </rencontre>
+    </journee>
+</championnat>

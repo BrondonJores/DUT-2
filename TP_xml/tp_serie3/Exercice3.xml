@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nuage[
+    <!ELEMENT nuage (variete+)>
+    <!ELEMENT variete ((especes, altitude) | hydrométéore)*>
+    <!ELEMENT especes (espece+)>
+    <!ELEMENT espece (#PCDATA)>
+    <!ELEMENT altitude EMPTY>
+    <!ATTLIST altitude minimale CDATA #REQUIRED maximale CDATA #REQUIRED>
+    <!ELEMENT hydrométéore (averses)>
+    <!ELEMENT averses EMPTY>
+    <!ATTLIST averses type (neige | grésil | grêle) #REQUIRED> 
+]>

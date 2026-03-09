@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 10px;
+            align-items: center;
+        }
+        h2{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #my-task{
+            margin-top: 10px;
+            height: 200px;
+            width: 100%;
+            background-color: rgb(250, 248, 248);
+            padding: 2%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            flex-wrap: wrap;
+            display: flex;
+            border: 2px solid rgb(9, 9, 87);
+            border-radius: 5px; 
+        }
+
+        #task {
+            margin-right: 10px;
+            border-radius: 9px;
+            height: 15px;
+        }
+
+        button{
+            border-radius: 11px;
+            background-color: azure;
+        }
+
+        table{
+            border: 10px;
+        }
+
+        #area-add{
+            opacity: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <h2>Todo List</h2>
+        </tr>
+
+        <tr>
+            <button id="display">+</button> 
+        </tr>
+
+        <tr>
+            <div id="area-add">
+                 <input type="text" id="task" placeholder="Entrer votre tache ici ..."> <button id="ad-task">Ajouter cette tâche</button> 
+            </div>
+           
+        </tr>
+        <tr>
+            <div id="my-task"> </div>
+        </tr>
+    </table>
+
+    <script src="exercice1.js"></script>
+</body>
+</html>

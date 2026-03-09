@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE films[
+    <!ELEMENT films (film+)>
+    <!ELEMENT film (titre, photo, realisateur, casting, synopsis)>
+    <!ATTLIST film langue CDATA #IMPLIED id ID #REQUIRED>
+    <!ELEMENT titre (#PCDATA)>
+    <!ELEMENT photo EMPTY>
+    <!ATTLIST photo url CDATA #IMPLIED>
+    <!ELEMENT realisateur (#PCDATA)>
+    <!ELEMENT casting (acteur+)>
+    <!ELEMENT acteur (personnage)>
+    <!ELEMENT personnage (#PCDATA)>
+    <!ATTLIST acteur id ID #REQUIRED>
+    <!ELEMENT synopsis (#PCDATA | reference)*>
+    <!ELEMENT reference EMPTY>
+    <!ATTLIST reference idact ID #REQUIRED>
+
+]>
+
+<films>
+    <film langue="FR" id="film1">
+        <titre>Loup de wall street</titre>
+        <photo url="..."/>
+        <realisateur>James cameroon</realisateur>
+        <casting>
+            <acteur id="act1">
+                <personnage>Leonardo Dicaprio</personnage>
+            </acteur>
+        </casting>
+        <synopsis>
+            Film qui raconte l'histoire d'un jeune tradeur <reference idact="act2" /> Leonardo Dicaprio qui fait fortune grâce à la bourse...
+        </synopsis>
+    </film>
+
+    <film langue="EN" id="film2">
+        <titre>A contre sens</titre>
+        <photo url="..."/>
+        <realisateur>James cameroon</realisateur>
+        <casting>
+            <acteur id="act4">
+                <personnage>Ali watson</personnage>
+            </acteur>
+        </casting>
+        <synopsis>
+            Film qui raconte l'histoire d'un jeune tradeur <reference idact="act3" /> Ali watson qui fait fortune grâce à la bourse...
+        </synopsis>
+    </film>
+</films>

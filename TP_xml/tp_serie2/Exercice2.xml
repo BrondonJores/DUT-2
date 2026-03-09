@@ -1,0 +1,55 @@
+<?xml version='1.1' encoding="UTF-8" ?> 
+<!DOCTYPE bibliographie SYSTEM "Exercice2DTD.dtd">
+
+<bibliographie>
+    <livre ISBN="LIV121">
+        <titre>Livre 1</titre>
+        <auteurs>
+            <auteur> 
+                <nom>Auteur1</nom> 
+            </auteur>
+            <auteur> 
+                <nom>Auteur2</nom> 
+            </auteur>
+        </auteurs>
+        <tomes>
+            <tome> 
+                <nombre-page>25</nombre-page> 
+            </tome>
+            <tome> 
+                <nombre-page>30</nombre-page>
+            </tome>
+        </tomes>
+        <editeur>Editeur1</editeur>
+        <lieu-edition>Lieu1</lieu-edition>
+        <lieu-impression>Lieu1I</lieu-impression>
+    </livre>
+
+    <article>
+        <titre>Article1</titre>
+        <auteurs>
+            <auteur>
+                <nom>Auteur3</nom>
+            </auteur>
+            <auteur>
+                <nom>Auteur4</nom>
+            </auteur>
+        </auteurs>
+        <references>
+            <reference>
+                <nom>Journal1</nom>
+                <numero-page>
+                    <page>2</page>
+                    <page>3</page>
+                    <page>5</page>
+                </numero-page>
+                <annee>2025</annee>
+                <numero-journal>JRN213</numero-journal>
+            </reference>
+        </references>
+    </article>
+
+    <avis>
+        Ceci est un avis optionnel
+    </avis>
+</bibliographie>

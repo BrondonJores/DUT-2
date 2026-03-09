@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Biblio.xsl" type="text/xsl"?>
+<bibliotheque>
+    <livre>
+        <titre>N ou M</titre>
+        <auteur>Agatha Christie</auteur>
+        <ref>Policier-C-15</ref>
+    </livre>
+
+    <livre>
+        <titre>Le chien des Baskerville</titre>
+        <auteur>Sir Arthur Conan Doyle</auteur>
+        <ref>Policier-D-3</ref>
+    </livre>
+
+    <livre>
+        <titre>Dune</titre>
+        <auteur>Franck Heckbert</auteur>
+        <ref>Fiction-H-1</ref>
+    </livre>
+</bibliotheque>

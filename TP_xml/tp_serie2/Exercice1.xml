@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE elt.racine SYSTEM "Exercice1dtd.dtd"[
+    <!ENTITY entite2 "<elt.enfant>entité</elt.enfant>">
+    <!ENTITY Éacute "&#201;">
+]>
+
+<elt.racine>
+    Ceci est un texte, avec le test de l'&Éacute; comme E accent aigu.
+    &entite2;
+    &Éacute;
+</elt.racine>

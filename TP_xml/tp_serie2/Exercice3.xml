@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document[
+    <!ELEMENT document (A+)>
+    <!ELEMENT A (B|C)*>
+    <!ELEMENT B EMPTY>
+    <!ELEMENT C EMPTY>
+]>
+
+<document>
+    <A>
+        <B />
+        <C />
+        <B />
+        <C />
+        <B />
+        <C />
+    </A>
+    
+
+    <A>
+
+    </A>
+
+    <A>
+        <B />
+        <C />
+        <B />
+        <C />
+    </A>
+
+    <A>
+        <B />
+        <B />
+        <B />
+        <C />
+        <C />
+        <C />
+    </A>
+
+    <A>
+        <C />
+        <C />
+        <C />
+        <B />
+        <B />
+        <B />
+    </A>
+
+    <A>
+        <B />
+        <B />
+        <C />
+        <B />
+        <B />
+        <C />
+    </A>
+
+    <A>
+        <C />
+        <C />
+        <B />
+        <C />
+    </A>
+</document>

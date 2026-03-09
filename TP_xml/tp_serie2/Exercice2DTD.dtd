@@ -1,0 +1,21 @@
+<!ELEMENT bibliographie ((livre+, article+) | avis)*>
+<!ELEMENT livre (titre, auteurs, tomes, editeur, lieu-edition, lieu-impression)>
+<!ATTLIST livre ISBN ID #REQUIRED>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT auteurs (auteur+)>
+<!ELEMENT auteur (nom)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT tomes (tome+)>
+<!ELEMENT tome (nombre-page)>
+<!ELEMENT nombre-page (#PCDATA)>
+<!ELEMENT lieu-edition (#PCDATA)>
+<!ELEMENT editeur (#PCDATA)>
+<!ELEMENT lieu-impression (#PCDATA)>
+<!ELEMENT article (titre, auteurs, references)>
+<!ELEMENT references (reference+)>
+<!ELEMENT reference (nom, numero-page, annee, numero-journal)>
+<!ELEMENT numero-page (page+)>
+<!ELEMENT page (#PCDATA)>
+<!ELEMENT annee (#PCDATA)>
+<!ELEMENT numero-journal (#PCDATA)>
+<!ELEMENT avis (#PCDATA)>

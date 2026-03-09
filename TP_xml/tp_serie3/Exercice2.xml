@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE eau[
+    <!ELEMENT eau (marque+)>
+    <!ELEMENT marque (bouteille+)>
+    <!ATTLIST marque nom CDATA #REQUIRED>
+    <!ELEMENT bouteille (( source, code-barre, ph, ions) |capacite  |  materiaux)*>
+    <!ELEMENT source (nom| departement)*>
+    <!ELEMENT code-barre (#PCDATA)>
+    <!ELEMENT capacite (#PCDATA)>
+    <!ELEMENT ph (#PCDATA)>
+    <!ELEMENT ions (ion+)>
+    <!ELEMENT ion (nom, concentration)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT concentration (#PCDATA)>
+    <!ELEMENT departement (#PCDATA)>
+    <!ATTLIST ion signe CDATA #REQUIRED>
+    <!ELEMENT materiaux (materiel+)>
+    <!ELEMENT materiel (#PCDATA)>
+]>
+<eau>
+    <marque nom="Cristalline">
+        <bouteille>
+            <source>
+                <nom>St-Cyr la Source</nom>
+                <departement>Loiret</departement>
+            </source>
+            <code-barre>3245767987890098771</code-barre>
+            <ph>7,45</ph>
+            <ions>
+                <ion signe="positif">
+                    <nom>calcium</nom>
+                    <concentration>71 mg/l</concentration>
+                </ion>
+                <ion signe="positif">
+                    <nom>magnesium</nom>
+                    <concentration>5,5 mg/l</concentration>
+                </ion>
+                <ion signe="negatif">
+                    <nom>chlorures</nom>
+                    <concentration>20 mg/l</concentration>
+                </ion>
+                <ion signe="negatif">
+                    <nom>nitrates</nom>
+                    <concentration>1 mg/l</concentration>
+                </ion>
+            </ions>
+            <capacite>150 cl</capacite>
+            <materiaux>
+                <materiel>fer</materiel>
+            </materiaux>
+        </bouteille>
+
+        <bouteille>
+            <source>
+                <nom>Aurèle</nom>
+                <departement>Alpes Maritimes</departement>
+            </source>
+            <code-barre>3257807890098771</code-barre>
+            <ph>7,4</ph>
+            <ions>
+                <ion signe="positif">
+                    <nom>calcium</nom>
+                    <concentration>98 mg/l</concentration>
+                </ion>
+                <ion signe="positif">
+                    <nom>magnesium</nom>
+                    <concentration>4 mg/l</concentration>
+                </ion>
+                <ion signe="negatif">
+                    <nom>chlorures</nom>
+                    <concentration>3,6 mg/l</concentration>
+                </ion>
+                <ion signe="negatif">
+                    <nom>nitrates</nom>
+                    <concentration>2 mg/l</concentration>
+                </ion>
+            </ions>
+            <capacite>50 cl</capacite>
+        </bouteille>
+    </marque>
+
+    <marque nom="Volvie">
+        <bouteille>
+            <source>
+                <nom>Volvie</nom>
+            </source>
+            <code-barre>4367789008878890</code-barre>
+            <ph>7</ph>
+            <ions>
+                <ion signe="positif">
+                    <nom>calcium</nom>
+                    <concentration>11,5 mg/l</concentration>
+                </ion>
+                <ion signe="positif">
+                    <nom>magnesium</nom>
+                    <concentration>8,0 mg/l</concentration>
+                </ion>
+                <ion signe="negatif">
+                    <nom>chlorures</nom>
+                    <concentration>13,5 mg/l</concentration>
+                </ion>
+                <ion signe="negatif">
+                    <nom>nitrates</nom>
+                    <concentration>6,3 mg/l</concentration>
+                </ion>
+            </ions>
+            <materiaux>
+                <materiel>silice</materiel>
+            </materiaux>
+
+            
+        </bouteille>
+    </marque>
+</eau>

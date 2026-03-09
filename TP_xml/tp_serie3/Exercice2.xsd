@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="eau">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="marque">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="bouteille" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        
+                                        <xsd:any>
+                                            <xsd:sequence>
+                                                <xsd:element name="source">
+                                                    <xsd:complexType>
+                                                        <xsd:sequence>
+                                                            <xsd:element name="Nom" type="xsd:string"></xsd:element>
+                                                            <xsd:element name="departement" type="xsd:string"></xsd:element>
+                                                        </xsd:sequence>
+                                                    </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element name="code-barre" type="xsd:string"></xsd:element>
+                                                <xsd:element name="ph" type="xsd:decimal"></xsd:element>
+                                                <xsd:element name="ions">
+                                                    <xsd:complexType>
+                                                        <xsd:sequence>
+                                                            <xsd:element name="ion" minOccurs="1" maxOccurs="unbounded">
+                                                                <xsd:complexType>
+                                                                    <xsd:sequence>
+                                                                        <xsd:element name="Nom" type="xsd:string"></xsd:element>
+                                                                        <xsd:element name="Concentration" type="xsd:string"></xsd:element>
+                                                                    </xsd:sequence>
+                                                                    <xsd:attribute name="signe" type="xsd:string"></xsd:attribute>
+                                                                </xsd:complexType>
+                                                            </xsd:element>
+
+                                                        </xsd:sequence>
+                                                    </xsd:complexType>
+                                                </xsd:element>
+                                                <xsd:element name="Capacite" type="xsd:string"></xsd:element>
+                                            </xsd:sequence>
+                                            <xsd:sequence>
+                                                <xsd:element name="materiaux">
+                                                    <xsd:complexType>
+                                                        <xsd:sequence>
+                                                            <xsd:element name="materiel" type="xsd:string"></xsd:element>
+                                                        </xsd:sequence>
+                                                    </xsd:complexType>
+                                                </xsd:element>
+                                            </xsd:sequence>
+                                        </xsd:any>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="Nom" type="xsd:string"/>
+                    </xsd:complexType>
+
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+        
+    </xsd:element>
+</xsd:schema>

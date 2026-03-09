@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE acteur[
+    <!ELEMENT acteur (etat-civil, photo, site_web, biographie)>
+    <!ATTLIST acteur id ID #REQUIRED>
+    <!ELEMENT etat-civil (nom, prenom, adresse, nom_du_pere, nom_de_la_mere, date_de_naissance, lieu_de_naissance, sexe, nationalite)>
+        <!ELEMENT nom (#PCDATA)>
+        <!ELEMENT prenom (#PCDATA)>
+        <!ELEMENT adresse (#PCDATA)>
+        <!ELEMENT nom_du_pere (#PCDATA)>
+        <!ELEMENT nom_de_la_mere (#PCDATA)>
+        <!ELEMENT date_de_naissance (#PCDATA)>
+        <!ELEMENT lieu_de_naissance (#PCDATA)>
+        <!ELEMENT sexe (#PCDATA)>
+        <!ELEMENT nationalite (#PCDATA)>
+    <!ELEMENT photo EMPTY>
+    <!ATTLIST photo url CDATA #IMPLIED>
+    <!ELEMENT site_web (#PCDATA)>
+    <!ATTLIST site_web url CDATA #REQUIRED nom CDATA #REQUIRED> 
+    <!ELEMENT biographie (paragraphe+)>
+        <!ELEMENT paragraphe (#PCDATA | annees | references | titres | phrase)*>
+        <!ELEMENT references (reference+)>
+        <!ELEMENT reference EMPTY>
+        <!ATTLIST reference idref ID #REQUIRED>
+        <!ELEMENT titres (titre+)>
+        <!ELEMENT titre (#PCDATA)>
+        <!ELEMENT annees (annee+)>
+        <!ELEMENT annee (#PCDATA)>
+        <!ELEMENT phrase (#PCDATA)>
+]>
+
+<acteur id="act1">
+    <etat-civil>
+        <nom>Brondon</nom>
+        <prenom>Jores</prenom>
+        <adresse>SALE</adresse>
+        <nom_du_pere>Houakeu</nom_du_pere>
+        <nom_de_la_mere>Armelle Kemmogne</nom_de_la_mere>
+        <date_de_naissance>19 octobre 2005</date_de_naissance>
+        <lieu_de_naissance>Yaounde</lieu_de_naissance>
+        <sexe>Masculin</sexe>
+        <nationalite>Camerounais</nationalite>    
+    </etat-civil>
+    <photo url="...."/>
+    <site_web url="brondon.com" nom="brondon website"/>
+    <biographie>
+        <paragraphe>
+            <annees>
+                <annee>2024</annee>
+            </annees>
+            <references>
+                <reference idref="act2"/>
+            </references>
+            <titres>
+                <titre>Loup de wall street</titre>
+            </titres>
+            
+            <phrase>Ceci est une phrase</phrase>
+        </paragraphe>
+    </biographie>
+</acteur>

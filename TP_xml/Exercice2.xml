@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE site [
+    <!ELEMENT site (theme+)>
+        <!ELEMENT theme (actualités| sport| bourse| média)>
+            <!ELEMENT actualités (breve+)>
+            <!ELEMENT sport (breve+)>
+            <!ELEMENT bourse (breve+)>
+            <!ELEMENT média (breve+)>
+                <!ELEMENT breve (langue, date, titre, photo, urls)>
+                <!ELEMENT langue (#PCDATA)>
+                <!ATTLIST langue code (fr | en) #REQUIRED>
+                <!ELEMENT date (#PCDATA)>
+                <!ELEMENT titre (#PCDATA)>
+                <!ELEMENT photo (#PCDATA)>
+                <!ELEMENT urls (url+)>
+                <!ELEMENT url (#PCDATA)>
+                <!ATTLIST url description CDATA #IMPLIED>
+]>
+
+<site>
+    <theme>
+        <actualités>
+            <breve>
+                <langue code="fr" />
+                <date> </date>
+                <titre> </titre> 
+                <photo> </photo>
+                <urls>
+                    <url description=""> </url>
+                </urls>
+            </breve>
+
+            <breve>
+                <langue code="en" />
+                <date> </date>
+                <titre> </titre> 
+                <photo> </photo>
+                <urls>
+                    <url description=""> </url>
+                </urls>
+            </breve>
+        </actualités>
+    </theme>
+
+    <theme>
+        <sport>
+            <breve>
+                <langue code="fr" />
+                <date> </date>
+                <titre> </titre> 
+                <photo> </photo>
+                <urls>
+                    <url description=""> </url>
+                </urls>
+            </breve>
+
+            <breve>
+                <langue code="en" />
+                <date> </date>
+                <titre> </titre> 
+                <photo> </photo>
+                <urls>
+                    <url description=""> </url>
+                </urls>
+            </breve>
+        </sport>
+    </theme>
+</site>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rapport>
+    <mandat numero="mn1" date="12/02/2025" montant="5000" etat="Non_Reçu">
+        <expediteur cin="ABX10921" nom="MRxx" prenom="PrenomY" ville="VilleZ"/>
+        <destinataire cin="ABX16721" nom="MRuw" prenom="PrenomV" ville="VilleA"/>
+    </mandat>
+
+    <mandat numero="mn2" date="19/02/2025" montant="7500" etat="Reçu">
+        <expediteur cin="ZBX9021" nom="MRoi" prenom="PrenomJ" ville="VilleO"/>
+        <destinataire cin="IUX16981" nom="MRiu" prenom="PrenomP" ville="VilleU"/>
+    </mandat>
+</rapport>
