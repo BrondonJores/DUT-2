@@ -1,6 +1,6 @@
 # DUT-2 - Depot de Travaux Pratiques
 
-Ce depot regroupe plusieurs mini-projets realises autour de Java, Java Web, SQL, XML et JavaScript.
+Ce depot regroupe plusieurs mini-projets realisés autour de Java, Java Web, SQL, XML et JavaScript durant ma deuxième année DUT.
 La structure est celle d'un workspace Eclipse avec plusieurs modules independants.
 
 ## Vue d'ensemble
